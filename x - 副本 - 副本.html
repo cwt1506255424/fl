@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+
+
+    let data = [
+        {
+            name:"2019",
+            list:[
+                300,
+                100,
+                200,
+            ]
+        },
+        {
+            name:"2020",
+            list:[
+                100,
+                200,
+                300
+            ]
+
+        },
+    ];
+
+
+    let arr = [];
+    data[0].list.forEach((itemChild,indexChild)=>{
+        let obj = {};
+        obj['date'] = indexChild;
+        data.forEach((item,index)=>{
+            obj[item.name] = item.list[indexChild];
+        });
+        arr.push(obj);
+    });
+    console.log(arr);
+
+</script>
+</body>
+</html>
