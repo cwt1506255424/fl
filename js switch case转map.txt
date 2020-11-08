@@ -1,0 +1,40 @@
+js switch case转map
+
+
+var y_Statistics = function(){
+    console.log('执行')
+}
+switch (currentTab){
+   case 0:
+       y_Statistics();
+       break;
+   case 1:
+       y_Statistics();
+       break;
+   case 2:
+       y_Statistics();
+       break;
+    case 3:
+       y_Statistics();
+       break;
+}
+
+var y_Statistics = function(){
+    console.log('执行')
+}
+const comparativeTotles = new Map([
+    [0, y_Statistics],
+    [1, y_Statistics],
+    [2, y_Statistics],
+    [3, y_Statistics]
+ ])
+let map = function(val){
+      return comparativeTotles.get(val)
+} 
+let getMap  = map(1); //如果查找不到返回undefined
+if(!getMap){
+      console.log('查找不到')
+}else{
+    concaozuole.log('执行操作')
+      getMap()
+}
